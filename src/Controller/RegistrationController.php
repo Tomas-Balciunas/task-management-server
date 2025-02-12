@@ -25,7 +25,7 @@ final class RegistrationController extends AbstractController
         $errors = $validator->validate($dto);
 
         if (count($errors) > 0) {
-            return $this->json($errors, 400);
+            return $this->json($errors, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         $user = new User();
@@ -35,6 +35,6 @@ final class RegistrationController extends AbstractController
         $manager->persist($user);
         $manager->flush();
 
-        return $this->json('Registration successful', 200, ['Content-Type' => 'application/json']);
+        return $this->json('Registration successful', Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 }

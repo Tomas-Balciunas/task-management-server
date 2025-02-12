@@ -22,13 +22,13 @@ final class TaskController extends AbstractController
     {
         $tasks = $repository->findAll();
 
-        return $this->json($tasks, 200, ['Content-Type' => 'application/json']);
+        return $this->json($tasks, Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
     #[Route('/{id}', name: 'task', methods: ['GET'])]
     public function get(Task $task): Response
     {
-        return $this->json($task, 200, ['Content-Type' => 'application/json']);
+        return $this->json($task, Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
     #[Route('/new', name: 'new_task', methods: ['POST'])]
@@ -43,7 +43,7 @@ final class TaskController extends AbstractController
         if (count($errors) > 0) {
             $errorsString = (string)$errors;
 
-            return $this->json($errorsString, 400);
+            return $this->json($errorsString, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         $task = new Task();
@@ -56,7 +56,7 @@ final class TaskController extends AbstractController
         $manager->persist($task);
         $manager->flush();
 
-        return $this->json("Task has been created.", 200, ['Content-Type' => 'application/json']);
+        return $this->json("Task has been created.", Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
     #[Route('/{id}', name: 'update_task', methods: ['PUT'])]
@@ -72,7 +72,7 @@ final class TaskController extends AbstractController
         if (count($errors) > 0) {
             $errorsString = (string)$errors;
 
-            return $this->json($errorsString, 400);
+            return $this->json($errorsString, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         $task->setTitle($dto->title);
@@ -83,7 +83,7 @@ final class TaskController extends AbstractController
         $manager->flush();
 
 
-        return $this->json('Task has been updated.', 200, ['Content-Type' => 'application/json']);
+        return $this->json('Task has been updated.', Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
     #[Route('/{id}', name: 'delete_task', methods: ['DELETE'])]
@@ -92,6 +92,6 @@ final class TaskController extends AbstractController
         $manager->remove($task);
         $manager->flush();
 
-        return $this->json('Task has been deleted.', 200, ['Content-Type' => 'application/json']);
+        return $this->json('Task has been deleted.', Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 }
