@@ -4,57 +4,54 @@ namespace App\Controller;
 
 use App\Entity\DTO\TaskDTO;
 use App\Entity\Task;
+use App\Entity\User;
 use App\Enum\TaskPriority;
 use App\Enum\TaskStatus;
 use App\Repository\TaskRepository;
+use App\Service\TaskService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Security\Http\Attribute\CurrentUser;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-#[Route('/api/task', name: 'task')]
+#[Route('/api/tasks', name: 'tasks')]
 final class TaskController extends AbstractController
 {
+    public function __construct(private readonly TaskService $service)
+    {
+    }
+
     #[Route('', methods: ['GET'])]
     public function index(TaskRepository $repository): Response
     {
         $tasks = $repository->findAll();
 
-        return $this->json($tasks, Response::HTTP_OK, ['Content-Type' => 'application/json']);
+        return $this->json($tasks, Response::HTTP_OK, ['Content-Type' => 'application/json'], ['groups' => ['tasks']]);
     }
 
     #[Route('/{id}', name: 'task', methods: ['GET'])]
     public function get(Task $task): Response
     {
-        return $this->json($task, Response::HTTP_OK, ['Content-Type' => 'application/json']);
+        return $this->json($task, Response::HTTP_OK, ['Content-Type' => 'application/json'], ['groups' => ['tasks']]);
     }
 
     #[Route('/new', name: 'new_task', methods: ['POST'])]
     public function new(
-        #[MapRequestPayload] TaskDTO $dto,
-        ValidatorInterface $validator,
-        EntityManagerInterface $manager
+        Request $request,
+        #[CurrentUser] User $me
     ): Response
     {
-        $errors = $validator->validate($dto);
-
-        if (count($errors) > 0) {
-            $errorsString = (string)$errors;
-
-            return $this->json($errorsString, Response::HTTP_UNPROCESSABLE_ENTITY);
+        try {
+            $data = json_decode($request->getContent(), true);
+            $this->service->handleNewTask($data, $me);
+        } catch (\Throwable $exception) {
+            return $this->json(['error' => $exception->getMessage()], Response::HTTP_BAD_REQUEST);
         }
 
-        $task = new Task();
-        $task->setTitle($dto->title);
-        $task->setDescription($dto->description);
-        $task->setPriority(TaskPriority::from($dto->priority));
-        $task->setStatus(TaskStatus::from($dto->status));
-        $task->setDueDate(new \DateTime($dto->dueDate));
-
-        $manager->persist($task);
-        $manager->flush();
 
         return $this->json("Task has been created.", Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
@@ -63,25 +60,13 @@ final class TaskController extends AbstractController
     public function update(
         Task $task,
         #[MapRequestPayload] TaskDTO $dto,
-        ValidatorInterface $validator,
-        EntityManagerInterface $manager
     ): Response
     {
-        $errors = $validator->validate($dto);
-
-        if (count($errors) > 0) {
-            $errorsString = (string)$errors;
-
-            return $this->json($errorsString, Response::HTTP_UNPROCESSABLE_ENTITY);
+        try {
+            $this->service->handleUpdateTask($dto, $task);
+        } catch (\Exception $exception) {
+            return $this->json(['error' => $exception->getMessage()], Response::HTTP_BAD_REQUEST);
         }
-
-        $task->setTitle($dto->title);
-        $task->setDescription($dto->description);
-        $task->setPriority(TaskPriority::from($dto->priority));
-        $task->setStatus(TaskStatus::from($dto->status));
-
-        $manager->flush();
-
 
         return $this->json('Task has been updated.', Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }

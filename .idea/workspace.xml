@@ -5,89 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4abc375-e5b7-4d2e-b82a-9ea40b0333f3" name="Changes" comment="rough base to use for client side">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/JWTAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/JWTHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constants/TaskConstants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/es6-promise/es6-promise.auto.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fetch/fetch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/400.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/700.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-ext-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-ext-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-ext-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-cyrillic-ext-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-ext-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-ext-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-ext-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-greek-ext-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-hebrew-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-hebrew-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-hebrew-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-hebrew-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-ext-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-ext-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-ext-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-latin-ext-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-math-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-math-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-math-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-math-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-symbols-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-symbols-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-symbols-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-symbols-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-vietnamese-400-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-vietnamese-400-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-vietnamese-700-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/fonts/open-sans/files/open-sans-vietnamese-700-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphiql-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphiql/graphiql.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphiql/graphiql.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphql-playground-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphql-playground/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/graphql-playground/middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/init-common-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/init-graphiql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/init-graphql-playground.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/init-redoc-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/init-swagger-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/logo-header.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/react/react-dom.production.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/react/react.production.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/redoc/redoc.standalone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/swagger-ui/oauth2-redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/swagger-ui/swagger-ui-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/swagger-ui/swagger-ui-standalone-preset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/swagger-ui/swagger-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/swagger-ui/swagger-ui.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/web.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bundles/apiplatform/webby.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DTO/TaskDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DTO/TaskDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdebug.ini" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +43,7 @@
     &quot;accountId&quot;: &quot;ca89c65e-8aa7-4954-8432-3e786591fc10&quot;
   }
 }</component>
-  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false" listening_started="true" />
+  <component name="PhpDebugGeneral" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="7e750211-50a2-4b89-8a33-80dd63077efa" name="localhost" use_path_mappings="true">
@@ -121,9 +51,15 @@
           <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
         </path_mappings>
       </server>
+      <server host="localhost" id="a7a74aff-9b09-414f-9343-31c94f37c817" name="localhost (1)" port="8080" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/var/www/html/public" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
@@ -233,28 +169,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/tomas/projects/tm-client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.JWTAuthenticator.php.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.JWTAuthenticator.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/tomas/projects/tm-client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\tomas\projects\tm-server" />
@@ -285,7 +225,13 @@
       <workItem from="1738750689808" duration="38000" />
       <workItem from="1738753226642" duration="3483000" />
       <workItem from="1739299293457" duration="3643000" />
-      <workItem from="1739362376067" duration="8472000" />
+      <workItem from="1739362376067" duration="16071000" />
+      <workItem from="1739443991572" duration="9906000" />
+      <workItem from="1739527239428" duration="2071000" />
+      <workItem from="1739631385832" duration="5766000" />
+      <workItem from="1739713434451" duration="9202000" />
+      <workItem from="1739796265092" duration="2394000" />
+      <workItem from="1739900137824" duration="3656000" />
     </task>
     <task id="LOCAL-00001" summary="rough base to use for client side">
       <option name="closed" value="true" />

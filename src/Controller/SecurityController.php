@@ -44,7 +44,7 @@ class SecurityController extends AbstractController
             return $this->json(['error' => 'Invalid credentials.'], Response::HTTP_BAD_REQUEST);
         }
 
-        $token = $JWTHandler->generateToken(['email' => $user->getEmail()]);
+        $token = $JWTHandler->generateToken(['email' => $user->getEmail(), 'name' => $user->getName()]);
 
         return $this->json(['token' => $token], Response::HTTP_OK);
     }
